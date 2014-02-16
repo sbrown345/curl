@@ -25,7 +25,7 @@
 #include "curl_setup.h"
 
 #ifdef HAVE_SYS_POLL_H
-#include <sys/poll.h>
+#include <poll.h>
 #elif defined(HAVE_POLL_H)
 #include <poll.h>
 #endif

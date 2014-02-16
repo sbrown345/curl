@@ -1,5 +1,13 @@
 #ifndef HEADER_CURL_SETUP_H
 #define HEADER_CURL_SETUP_H
+#include "curl_config.h"
+#include <ifaddrs.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <netinet/in.h>
+
 /***************************************************************************
  *                                  _   _ ____  _
  *  Project                     ___| | | |  _ \| |

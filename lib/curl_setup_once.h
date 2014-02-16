@@ -126,7 +126,7 @@ struct timeval {
 #endif
 
 
-#if defined(__minix)
+#if defined(__minix) || defined(TARGET_EMSCRIPTEN)
 /* Minix doesn't support recv on TCP sockets */
 #define sread(x,y,z) (ssize_t)read((RECV_TYPE_ARG1)(x), \
                                    (RECV_TYPE_ARG2)(y), \
@@ -178,7 +178,7 @@ struct timeval {
 #endif /* HAVE_RECV */
 
 
-#if defined(__minix)
+#if defined(__minix) || defined(TARGET_EMSCRIPTEN)
 /* Minix doesn't support send on TCP sockets */
 #define swrite(x,y,z) (ssize_t)write((SEND_TYPE_ARG1)(x), \
                                     (SEND_TYPE_ARG2)(y), \
